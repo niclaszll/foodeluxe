@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Foodeluxe</string>
+    <string name="thumbnail">Thumbnail</string>
+    <string name="search_title">Search</string>
+    <string name="search_hint">Search for recipes</string>
+
+    <string name="search">Suche</string>
+    <string name="underline">underline</string>
+    <string name="frontpage_btn_text">Treat Yourself</string>
+    <string name="recommended">Recommended -</string>
+    <string name="top_picks_for_you">Top Picks for you</string>
+    <string name="remove_from_fav">remove favourite</string>
+    <string name="min">%1$s min</string>
+    <string name="kcal">%1$s kcal</string>
+    <string name="add_fav">add to favourites</string>
+    <string name="favourites">Favourites</string>
+    <string name="delete">DELETE</string>
+    <string name="show_full_recipe">show full recipe</string>
+    <string name="add_to_favourites">add to favourites</string>
+    <string name="about">About</string>
+    <string name="share">Share</string>
+    <string name="edamam_image">Edamam Image</string>
+</resources>

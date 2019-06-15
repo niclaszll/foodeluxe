@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="2.5dip"
+    android:paddingBottom="2.5dip"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/ingredient_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"
+        android:textColor="#8d8d8d"
+        android:textSize="12sp"
+        tools:ignore="SmallSp"
+        tools:text="Ingredient"
+        android:fontFamily="@font/raleway_medium"
+        android:drawablePadding="3dp"
+        android:drawableStart="@drawable/ic_stripe_6sp"/>
+
+</LinearLayout>

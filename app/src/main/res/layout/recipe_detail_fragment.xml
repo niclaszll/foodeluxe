@@ -1,0 +1,365 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="220dip"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/shadow_rect"
+            android:contentDescription="@string/thumbnail"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/raleway_light"
+                    android:textColor="#8d8d8d"
+                    android:textSize="16sp"
+                    tools:ignore="SmallSp"
+                    tools:text="Jon Doe" />
+
+                <TextView
+                    android:id="@+id/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/raleway_bold"
+                    android:gravity="start"
+                    android:textColor="#464646"
+                    android:textSize="28sp"
+                    tools:text="Tomato Cheese Cake" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/ingredient_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="32dp"
+                    android:scrollbars="vertical" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="32dp">
+
+                        <Button
+                            android:id="@+id/show_recipe_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:layout_marginEnd="30dp"
+                            android:background="@drawable/button_red_bg_states"
+                            android:fontFamily="@font/raleway_bold"
+                            android:paddingStart="15dp"
+                            android:paddingEnd="15dp"
+                            android:text="@string/show_full_recipe"
+                            android:textColor="@color/button_red_bg_text_states"
+                            android:textSize="12sp">
+
+                        </Button>
+
+                        <Button
+                            android:id="@+id/favourite_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40sp"
+                            android:background="@drawable/button_red_border_states"
+                            android:fontFamily="@font/raleway_bold"
+                            android:paddingStart="15dp"
+                            android:paddingEnd="15dp"
+                            android:text="@string/add_to_favourites"
+                            android:textColor="@color/button_red_border_text_states"
+                            android:textSize="12sp">
+
+                        </Button>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:contentDescription="@string/underline"
+                        android:layerType='software'
+                        android:src="@drawable/divider_line_dotted" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/calories"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_whatshot_red_20sp"
+                            android:drawablePadding="5sp"
+                            android:fontFamily="@font/raleway_semibold"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:textColor="#8d8d8d"
+                            android:textSize="20sp"
+                            tools:ignore="SmallSp"
+                            tools:text="430 kcal" />
+
+                        <TextView
+                            android:id="@+id/cooking_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="80dp"
+                            android:drawableStart="@drawable/ic_timer_black_20sp"
+                            android:drawablePadding="5sp"
+                            android:fontFamily="@font/raleway_semibold"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:textColor="#8d8d8d"
+                            android:textSize="20sp"
+                            tools:ignore="SmallSp"
+                            tools:text="30 min" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:contentDescription="@string/underline"
+                        android:layerType='software'
+                        android:src="@drawable/divider_line_dotted" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="vertical"
+                android:paddingBottom="48dp"
+                android:textColor="#FF2a2a2a">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/label1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30sp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/label_bg_green"
+                        android:fontFamily="@font/raleway_bold"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textAllCaps="true"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"
+                        tools:text="diet labels" />
+
+                    <TextView
+                        android:id="@+id/label2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30sp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/label_bg_green"
+                        android:fontFamily="@font/raleway_bold"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textAllCaps="true"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"
+                        tools:text="diet labels" />
+
+                    <TextView
+                        android:id="@+id/label3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30sp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/label_bg_green"
+                        android:fontFamily="@font/raleway_bold"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textAllCaps="true"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"
+                        tools:text="diet labels" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/label4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30sp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/label_bg_green"
+                        android:fontFamily="@font/raleway_bold"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textAllCaps="true"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"
+                        tools:text="diet labels" />
+
+                    <TextView
+                        android:id="@+id/label5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30sp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/label_bg_green"
+                        android:fontFamily="@font/raleway_bold"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textAllCaps="true"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"
+                        tools:text="diet labels" />
+
+                    <TextView
+                        android:id="@+id/label6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30sp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/label_bg_green"
+                        android:fontFamily="@font/raleway_bold"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textAllCaps="true"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"
+                        tools:text="diet labels" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/label7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30sp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/label_bg_green"
+                        android:fontFamily="@font/raleway_bold"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textAllCaps="true"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"
+                        tools:text="diet labels" />
+
+                    <TextView
+                        android:id="@+id/label8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30sp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/label_bg_green"
+                        android:fontFamily="@font/raleway_bold"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textAllCaps="true"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"
+                        tools:text="diet labels" />
+
+                    <TextView
+                        android:id="@+id/label9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30sp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/label_bg_green"
+                        android:fontFamily="@font/raleway_bold"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textAllCaps="true"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp"
+                        tools:text="diet labels" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_edamam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            android:contentDescription="@string/edamam_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/edamam_badge" />
+
+    </LinearLayout>
+</ScrollView>
